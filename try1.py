@@ -77,28 +77,28 @@ top10['lon'] = [127.0629804,127.01060411,127.01152992,126.7886531,127.0312101,12
 
 
 
-#지도 그리기
-my_map=folium.Map(location = [top10['lat'].mean(),top10['lon'].mean()], zoom_start=7)
+# #지도 그리기
+# my_map=folium.Map(location = [top10['lat'].mean(),top10['lon'].mean()], zoom_start=7)
 
-for index, row in top10.iterrows():
+# for index, row in top10.iterrows():
     
-    folium.CircleMarker(
-    location=[row['lat'],row['lon']],
-    radius=row['환자수']/10000,
-    color='pink',
-    fill=True,
-    fill_opacity=0.5).add_to(my_map)
+#     folium.CircleMarker(
+#     location=[row['lat'],row['lon']],
+#     radius=row['환자수']/10000,
+#     color='pink',
+#     fill=True,
+#     fill_opacity=0.5).add_to(my_map)
     
-    folium.Marker(location=[row['lat'],row['lon']],
-                 icon=folium.DivIcon(html=f"<div>{row['시군구']}{row['환자수']}</div>"),).add_to(my_map)
+#     folium.Marker(location=[row['lat'],row['lon']],
+#                  icon=folium.DivIcon(html=f"<div>{row['시군구']}{row['환자수']}</div>"),).add_to(my_map)
     
-st.title('정신 질환 전국 상위 10곳')
-st.caption('2018년부터 2022까지 데이터 합산')
+# st.title('정신 질환 전국 상위 10곳')
+# st.caption('2018년부터 2022까지 데이터 합산')
 
-#지도그리기
+# #지도그리기
 
 
-st.components.v1.html(my_map._repr_html_(),width=800,height=600)
+# st.components.v1.html(my_map._repr_html_(),width=800,height=600)
 #데이터 프레임 보시겠습니까?
 on =st.toggle('DataFrame 보기')
 if on:
