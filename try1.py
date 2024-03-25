@@ -11,10 +11,10 @@ st.image('https://cdn.pixabay.com/photo/2024/02/27/15/00/peace-8600311_1280.jpg'
 
 
 st.write('오늘 당신의 하루는 어떠셨나요? 힘들진 않으셨나요?')
-#st.write("지친 당신을 위한 힐링 영상을 준비했어요.")
-#st.video("C:/Users/User/Desktop/choi/health/내 프로젝트.mp4")
-#st.caption('출처 : https://www.youtube.com/watch?v=cOLNoxjOLDE&ab_channel=멸종위기종김한별')
-#st.write('멍때리게 보게 되고 왜인지 모르게 힘을 얻게 되는 영상이라 몇 년에 한 번씩은 꼭 보는 영상이랍니다! 🍀')
+st.write("지친 당신을 위한 힐링 영상을 준비했어요.")
+st.video("C:/Users/User/Desktop/choi/health/내 프로젝트.mp4")
+st.caption('출처 : https://www.youtube.com/watch?v=cOLNoxjOLDE&ab_channel=멸종위기종김한별')
+st.write('멍때리게 보게 되고 왜인지 모르게 힘을 얻게 되는 영상이라 몇 년에 한 번씩은 꼭 보는 영상이랍니다! 🍀')
 
 st.header('지친 당신을 위한 랜덤 행운 뽑기!')
 st.write('동물들 중 한마리를 골라주세요!')
