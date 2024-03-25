@@ -1,4 +1,4 @@
-import folium
+#import folium
 import streamlit as st
 
 import pandas as pd
