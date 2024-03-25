@@ -40,7 +40,7 @@ st.divider()
 st.header('원본데이터')
 st.caption('강보험심사평가원_시군구별 주요 정신질환 통계 2018-2022')
 
-depress= pd.read_csv("C:/Users/User/Desktop/choi/health/depress2022.csv",encoding='cp949')
+depress= pd.read_csv("https://github.com/choirami/streamlit/blob/main/depress2022.csv",encoding='cp949')
 st.dataframe(depress)
 
 
