@@ -11,22 +11,26 @@ st.image('https://cdn.pixabay.com/photo/2024/02/27/15/00/peace-8600311_1280.jpg'
 
 
 st.write('오늘 당신의 하루는 어떠셨나요? 힘들진 않으셨나요?')
-# st.write("지친 당신을 위한 힐링 영상을 준비했어요.")
-# st.video("C:/Users/User/Desktop/choi/health/내 프로젝트.mp4")
-# st.caption('출처 : https://www.youtube.com/watch?v=cOLNoxjOLDE&ab_channel=멸종위기종김한별')
-# st.write('멍때리게 보게 되고 왜인지 모르게 힘을 얻게 되는 영상이라 몇 년에 한 번씩은 꼭 보는 영상이랍니다! 🍀')
+st.write("지친 당신을 위한 힐링 영상을 준비했어요.")
+st.video("C:/Users/User/Desktop/choi/health/내 프로젝트.mp4")
+st.caption('출처 : https://www.youtube.com/watch?v=cOLNoxjOLDE&ab_channel=멸종위기종김한별')
+st.write('멍때리게 보게 되고 왜인지 모르게 힘을 얻게 되는 영상이라 몇 년에 한 번씩은 꼭 보는 영상이랍니다! 🍀')
 
 st.header('지친 당신을 위한 랜덤 행운 뽑기!')
 st.write('동물들 중 한마리를 골라주세요!')
 #button
 if st.button('🐇'):
     st.image('https://i.pinimg.com/originals/0b/2a/94/0b2a94df46573abed3dd21b352371c10.jpg')
+    st.write('당신은 그뤠잇해요')
 elif st.button('🦊'):
     st.image('https://i.pinimg.com/564x/49/ef/87/49ef87ba4c373cc606876bc336f4755e.jpg')
+    st.write('주변을 둘러보면 생각보다 당신의 편이 많아요')
 elif st.button('🐱'):
     st.image('https://i.pinimg.com/564x/8c/1b/13/8c1b1365a1bb20117d9e6f5e2f2770c1.jpg')
+    st.write('당신이 최고야!!')
 elif st.button('🐯'):
     st.image('https://i.pinimg.com/564x/70/a5/bc/70a5bc8c14ad110dcf2b2b9957b22122.jpg')
+    st.write('살면서 당신같이 멋진 사람을 본 적이 없어요!')
 else :
     st.write('행운이 곧 당신에게로!')
 
@@ -40,13 +44,8 @@ st.divider()
 st.header('원본데이터')
 st.caption('강보험심사평가원_시군구별 주요 정신질환 통계 2018-2022')
 
-try:
-    depress = pd.read_csv('https://github.com/choirami/streamlit/blob/main/depress2022.csv', encoding='utf-8')
-except UnicodeDecodeError:
-    print("UTF-8로 파일을 열 수 없습니다.")
 
-# UTF-8로 열리지 않으면 다른 인코딩 시도
-depress = pd.read_csv('https://github.com/choirami/streamlit/blob/main/depress2022.csv', encoding='cp949')
+depress = pd.read_csv('https://raw.githubusercontent.com/choirami/streamlit/main/dpress2.csv', encoding='utf-8')
 
 st.dataframe(depress)
 
