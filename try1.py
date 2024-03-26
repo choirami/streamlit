@@ -40,7 +40,14 @@ st.divider()
 st.header('원본데이터')
 st.caption('강보험심사평가원_시군구별 주요 정신질환 통계 2018-2022')
 
-depress= pd.read_csv("https://github.com/choirami/streamlit/blob/main/depress2022.csv",encoding='cp949')
+try:
+    depress = pd.read_csv('https://github.com/choirami/streamlit/blob/main/depress2022.csv', encoding='utf-8')
+except UnicodeDecodeError:
+    print("UTF-8로 파일을 열 수 없습니다.")
+
+# UTF-8로 열리지 않으면 다른 인코딩 시도
+depress = pd.read_csv('https://github.com/choirami/streamlit/blob/main/depress2022.csv', encoding='cp949')
+
 st.dataframe(depress)
 
 
