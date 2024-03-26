@@ -60,8 +60,8 @@ st.altair_chart(chart, use_container_width=True)
 
 
 
-age = st.radio('어떤 연령대의 정신 질환 비율이 궁금하신가요?',('10~19세','20~29세','30~39세','40~49세','50~59세','60~69세','70~79세','90~99세','100세 이상'))
-
+age = st.radio('어떤 연령대의 정신 질환 비율이 궁금하신가요?',('10~19세','20~29세','30~39세','40~49세','50~59세','60~69세','70~79세','90~99세'))
+st.caption('100세 이상은 값이 존재하지 않습니다.')
 
 pie=depress[(depress['연령구분'] == f'{age}')].groupby(by='상별구분',as_index=False)['환자수'].sum()
 fig = px.pie(pie,names="상별구분",values="환자수",title = f'{age}의 정신질환 비율')
