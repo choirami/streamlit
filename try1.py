@@ -78,7 +78,7 @@ st.plotly_chart(fig)
 
 
 top10 = depress.groupby(by='시군구',as_index=False)['환자수'].sum().sort_values(by='환자수',ascending=False).head(10)
-top10.reset_index(drop=True)
+top10.reset_index(drop=True,inplace=True)
 top10['lat'] = [37.4966645,37.3793356,37.5056205,37.4732933,35.1652494,35.1652494,36.2801669,35.2801669,35.8276369,37.5504483]
 top10['lon'] = [127.0629804,127.01060411,127.01152992,126.7886531,127.0312101,129.0430314,126.977339,127.3450306,128.5292473,127.1470117]
 
